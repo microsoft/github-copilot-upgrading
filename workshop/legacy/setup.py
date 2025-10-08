@@ -1,5 +1,3 @@
-import distribute_setup
-distribute_setup.use_setuptools()
 from setuptools import setup
 
 tests_require = ['pytest']
@@ -9,9 +7,7 @@ setup(
     version = "0.0.6",
     packages = ['guachi'],
     include_package_data=True,
-    package_data = {
-        '': ['distribute_setup.py'],
-        },
+    # No longer need distribute_setup.py
 
     # metadata
     author = "Alfredo Deza",

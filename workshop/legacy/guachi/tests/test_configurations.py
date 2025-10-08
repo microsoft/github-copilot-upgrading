@@ -1,11 +1,13 @@
+
+# MockDict must be at module level for test cases
+class MockDict(dict):
+    pass
+
 import unittest
 import shutil
 from os import remove, mkdir, path
+from guachi.config import DictMatch, OptionConfigurationError
 
-from guachi.config  import DictMatch, OptionConfigurationError 
-
-class MockDict(dict):
-    pass
 
 def create_configs():
     try:

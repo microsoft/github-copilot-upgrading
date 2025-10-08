@@ -52,7 +52,7 @@ class ConfigMapper(object):
         if len(dict_config.items()) > 0:
             db = dbdict(self.path)
             for key, value in dict_config.items():
-                db[key] = value 
+                db[key] = value
 
 
     def update_config(self, configuration=None):
