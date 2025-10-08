@@ -26,7 +26,8 @@ class dbdict(dict):
 
     def __getitem__(self, key):
         row = self.con.execute(self.select_value,(key,)).fetchone()
-        if not row: raise KeyError("key '%s' not found in persistent dictionary" % key)
+        if not row:
+            raise KeyError("key '%s' not found in persistent dictionary" % key)
         return row[0]
 
 

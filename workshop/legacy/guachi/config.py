@@ -1,6 +1,7 @@
 from configparser import ConfigParser
 from os.path import isfile
 
+
 class DictMatch(object):
 
     def __init__(self, config=None, mapped_options={}, mapped_defaults={}):
@@ -48,6 +49,7 @@ class DictMatch(object):
 
     def key_matcher(self, original, return_empty=False):
         converted_opts = {}
+
 
         for key, value in self.mapped_options.items():
             try:
